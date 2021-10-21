@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.Valid;
-
 @RestController
 @RequestMapping("/v1/account")
 public class AccountServiceController {
@@ -29,7 +27,7 @@ public class AccountServiceController {
     }
 
     @PostMapping(value = "/transfer")
-    public @Valid TransferMoneyResponse getAccountBalance(@Valid @RequestBody TransferMoneyRequest request) {
+    public TransferMoneyResponse getAccountBalance(@RequestBody TransferMoneyRequest request) {
         return accountService.transfer(request.transferorAccountNumber, request.transfereeAccountNumber, request.amount);
     }
 
