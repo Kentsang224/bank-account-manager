@@ -16,6 +16,10 @@ public class BankAccount {
     @Column(name = "accountNumber")
     public String accountNumber;
 
+    @Column(name = "currency", nullable = false)
+    @Enumerated(EnumType.STRING)
+    public Currency currency;
+
     @Column(name = "balance", nullable = false)
     public BigDecimal balance;
 
