@@ -11,3 +11,5 @@ But for now, we are using h2 default isolation level which is read committed whi
 Possible Improvements:
 1. More verbal message telling frontend or user of what goes wrong, instead of merely an error code
 2. Possibly adding some security, for example user authentication by adding filter to security chain.
+3. Possibly seperating the error by business domain.
+4. Add Swagger for API documentation
