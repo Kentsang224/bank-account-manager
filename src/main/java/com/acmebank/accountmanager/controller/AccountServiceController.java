@@ -28,7 +28,7 @@ public class AccountServiceController {
         return accountService.getBalance(accountNumber);
     }
 
-    @PostMapping(value = "/transfer")
+    @PostMapping("/transfer")
     public TransferMoneyResponse getAccountBalance(@Valid @RequestBody TransferMoneyRequest request) {
         return accountService.transfer(request.transferorAccountNumber, request.transfereeAccountNumber, request.amount);
     }
